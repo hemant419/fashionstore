@@ -1,0 +1,330 @@
+{
+	"info": {
+		"_postman_id": "9cb8e6bd-dd1f-4dd6-ac4b-9c39e50a0a3f",
+		"name": "Fashion-Store-Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"harshal\",\r\n    \"email\" : \"harshal@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"hemant@gmail.com\",\r\n    \"password\" : \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMDBiNmRhOGZmNmIyYjYzYWU1ZTVjOSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDQyMTQyMzcsImV4cCI6MTY0NDMwMDYzN30.4zRKtbZKCPwI05c85HM4WBfReT2fp-hRnvnsTvvxmFI",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"username\": \"harshal\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/users/6200b6da8ff6b2b63ae5e5c9",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"6200b6da8ff6b2b63ae5e5c9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMDBiNmFmOGZmNmIyYjYzYWU1ZTVjNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0NDIxNDUzNCwiZXhwIjoxNjQ0MzAwOTM0fQ.pV5uRXoRixkOT1fQMIFcOa43EHU-NmaxxD51-3tEP-w",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:4000/api/users/find/6200b6da8ff6b2b63ae5e5c9",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"find",
+						"6200b6da8ff6b2b63ae5e5c9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMDBiNmFmOGZmNmIyYjYzYWU1ZTVjNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0NDQwNTc2MiwiZXhwIjoxNjQ0NDkyMTYyfQ.QrW3Y7cOqyqkRtP8NmZIrKtmVISnwZOGMJT--g_BAGA",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:4000/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Stats",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token",
+						"value": "Bearere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMDBiNmFmOGZmNmIyYjYzYWU1ZTVjNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0NDQwNTc2MiwiZXhwIjoxNjQ0NDkyMTYyfQ.QrW3Y7cOqyqkRtP8NmZIrKtmVISnwZOGMJT--g_BAGA",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:4000/api/users/stats",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMDBiNmFmOGZmNmIyYjYzYWU1ZTVjNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0NDQwNTc2MiwiZXhwIjoxNjQ0NDkyMTYyfQ.QrW3Y7cOqyqkRtP8NmZIrKtmVISnwZOGMJT--g_BAGA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"adidas tshirt\",\r\n    \"desc\":\"test\",\r\n    \"img\": \"test\",\r\n    \"categories\":[\"tshirt\", \"women\"],\r\n    \"size\":\"S\",\r\n    \"color\":\"gray\",\r\n    \"price\":600\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMDBiNmFmOGZmNmIyYjYzYWU1ZTVjNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0NDQwNTc2MiwiZXhwIjoxNjQ0NDkyMTYyfQ.QrW3Y7cOqyqkRtP8NmZIrKtmVISnwZOGMJT--g_BAGA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMDBiNmFmOGZmNmIyYjYzYWU1ZTVjNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0NDQwNTc2MiwiZXhwIjoxNjQ0NDkyMTYyfQ.QrW3Y7cOqyqkRtP8NmZIrKtmVISnwZOGMJT--g_BAGA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"6200b6da8ff6b2b63ae5e5c9\",\r\n    \"products\": [\r\n        {\r\n            \"productId\": \"21hemant\",\r\n            \"quantity\": 5\r\n        },\r\n        {\r\n            \"productId\": \"22harshal\",\r\n            \"quantity\": 3\r\n        }\r\n    ],\r\n    \"amount\" : 2000,\r\n    \"address\": \"surat\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Income",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMDBiNmFmOGZmNmIyYjYzYWU1ZTVjNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0NDQwNTc2MiwiZXhwIjoxNjQ0NDkyMTYyfQ.QrW3Y7cOqyqkRtP8NmZIrKtmVISnwZOGMJT--g_BAGA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
